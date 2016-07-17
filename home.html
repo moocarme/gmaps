@@ -157,8 +157,11 @@
                     return randomScalingFactor();
                 });
             });
-        
-            document.getElementById("cost").innerHTML = "$"+ randomColorFactor() + ",000";
+            totCost = 0;
+            if (document.getElementById("myCheck").checked){
+              totCost += 10;
+            };
+            document.getElementById("cost").innerHTML = "$"+ totCost + ",000";
             window.myLine.update();
         });
         autocomplete.addListener('place_changed', function() {
