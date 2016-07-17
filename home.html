@@ -183,7 +183,12 @@
         autocomplete.addListener('place_changed', function() {
           $.each(config.data.datasets, function(i, dataset) {
                 dataset.data = dataset.data.map(function() {
+                  if(i==1){ 
+                    return randomScalingFactor3x();
+                  } else{
                     return randomScalingFactor();
+                  };
+                    
                 });
             });
             window.myLine.update();
