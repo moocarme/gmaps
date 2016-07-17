@@ -157,14 +157,8 @@
                     return randomScalingFactor();
                 });
             });
-        var totCost = 0;
-                if ($('changetype-bl').is(':checked') == true) {
-                    totCost += 1;
-                }else{
-                    totCost += 17;
-                }
-            });
-            document.getElementById("cost").innerHTML = "$"+ totCost + ",000";
+        
+            document.getElementById("cost").innerHTML = "$"+ randomColorFactor() + ",000";
             window.myLine.update();
         });
         autocomplete.addListener('place_changed', function() {
