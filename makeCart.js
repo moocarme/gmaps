@@ -105,7 +105,11 @@ var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "A
         $('#randomizeData').click(function() {
             $.each(config.data.datasets, function(i, dataset) {
                 dataset.data = dataset.data.map(function() {
-                    return randomScalingFactor();
+                    if(i==0){ 
+	                    return randomScalingFactor3x();
+	                  } else{
+	                    return randomScalingFactor3x();
+	                  };
                 });
 
             });
