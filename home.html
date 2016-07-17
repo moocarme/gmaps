@@ -94,12 +94,13 @@
       <p id = "mylat1">Latitude</p>
       <p id = "mylng1">Longitude</p>
       <div id="type-selector" class="controls">
-      <input type="checkbox" name="type" id="changetype-all" checked="checked">
+      <input type="checkbox" name="type" id="changetype-all">
       <label for="changetype-all">Add bike lane.</label>
 
       <input type="checkbox" name="type" id="changetype-establishment">
       <label for="changetype-establishment">Convert driving lane to parking lane.</label>
-
+    </div>
+    <div id="type-selector" class="controls">
       <input type="checkbox" name="type" id="changetype-address">
       <label for="changetype-address">Synchronize traffic lights.</label>
       <input type="checkbox" name="type" id="changetype-address">
@@ -148,7 +149,7 @@
                     return randomScalingFactor();
                 });
             });
-            document.getElementById("cost").innerHTML = "$"+randomColorFactor();
+            document.getElementById("cost").innerHTML = "$"+randomColorFactor() + ",000";
             window.myLine.update();
         });
         autocomplete.addListener('place_changed', function() {
@@ -167,9 +168,9 @@
           }
           var mylat = place.geometry.location.lat();
           var mylng = place.geometry.location.lng();
-          document.getElementById("mylat1").innerHTML = mylat;
-          document.getElementById("mylng1").innerHTML = mylng;
-          document.getElementById("cost").innerHTML = randomColorFactor();
+          document.getElementById("mylat1").innerHTML = "Latitude: " + mylat;
+          document.getElementById("mylng1").innerHTML = "Longitude: " + mylng;
+          document.getElementById("cost").innerHTML = "$" + randomColorFactor() + ",000";
           // If the place has a geometry, then present it on a map.
           if (place.geometry.viewport) {
             map.fitBounds(place.geometry.viewport);
