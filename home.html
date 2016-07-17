@@ -21,13 +21,13 @@
       #map {
         height: 100%;
         float: right ;
-        width: 70% ;
+        width: 80% ;
       }
       #navbar {
         height: 100%;
         float: left ;
         width: 20% ;
-        margin: 2%;
+        margin: 10%;
       }
       .controls {
         margin-top: 10px;
@@ -95,10 +95,7 @@
       
       <div id="map"></div>
       <div id= "navbar">
-        
-        <h4>Latitude</h4>
-        <p id = "lat1">Latitude </p>
-        
+        <p id = "test">test </p>
       </div>
     <script>
       // This example requires the Places library. Include the libraries=places
@@ -135,8 +132,7 @@
             return;
           }
           var lat1 = place.geometry.location.lat();
-          document.getElementById("lat1").innerHTML = val(lat1);
-          
+          document.getElementById("test").innerHTML = val(lat1);
           // If the place has a geometry, then present it on a map.
           if (place.geometry.viewport) {
             map.fitBounds(place.geometry.viewport);
