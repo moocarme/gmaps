@@ -15,7 +15,7 @@ var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "A
         var config = {
             type: 'line',
             data: {
-                labels: [["June","2015"], "July", "August", "September", "October", "November", "December", ["January","2016"],"February", "March", "April", "May"],
+                labels: [["June","2016"], "July", "August", "September", "October", "November", "December", ["January","2017"],"February", "March", "April", "May"],
                 datasets: [{
                     label: "My First dataset",
                     data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()],
@@ -101,7 +101,7 @@ var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "A
             window.myLine = new Chart(ctx, config);
         };
 
-        $('#randomizeData').click(function() {
+        $('#click').click(function() {
             $.each(config.data.datasets, function(i, dataset) {
                 dataset.data = dataset.data.map(function() {
                     return randomScalingFactor();
