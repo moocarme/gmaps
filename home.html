@@ -134,12 +134,16 @@
                 dataset.data = dataset.data.map(function() {
                     return randomScalingFactor();
                 });
-
             });
-
             window.myLine.update();
         });
         autocomplete.addListener('place_changed', function() {
+          $.each(config.data.datasets, function(i, dataset) {
+                dataset.data = dataset.data.map(function() {
+                    return randomScalingFactor();
+                });
+            });
+            window.myLine.update();
           infowindow.close();
           marker.setVisible(false);
           var place = autocomplete.getPlace();
