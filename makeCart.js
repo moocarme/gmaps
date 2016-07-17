@@ -23,7 +23,7 @@ var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "A
                     borderDash: [5, 5],
                 }, {
                     label: "Number of Cyclist Injuries",
-                    data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()],
+                    data: [randomScalingFactor()/2, randomScalingFactor()/2, randomScalingFactor()/2, randomScalingFactor()/2, randomScalingFactor()/2, randomScalingFactor()/2, randomScalingFactor()/2, randomScalingFactor()/2, randomScalingFactor()/2, randomScalingFactor()/2, randomScalingFactor()/2, randomScalingFactor()/2],
                 }]
             },
             options: {
