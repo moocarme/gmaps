@@ -88,7 +88,7 @@
   </head>
   <body>
     <input id="pac-input" class="controls" type="text"
-        placeholder="Enter an intersection of location">
+        placeholder="Enter an intersection or location">
     <div id="type-selector" class="controls">
       <input type="radio" name="type" id="changetype-all" checked="checked">
       <label for="changetype-all">All</label>
@@ -216,7 +216,7 @@
           }
           var mylat = place.geometry.location.lat();
           var mylng = place.geometry.location.lng();
-          document.getElementById("mylat1").innerHTML = "Lat/Long: (" + Math.round(100*mylat)/100 + "," +Math.round(100*mylng)/100 +")";
+          document.getElementById("mylat1").innerHTML = "Lat/Long: (" + Math.round(100*mylat)/100 + ", " +Math.round(100*mylng)/100 +")";
           
           // If the place has a geometry, then present it on a map.
           if (place.geometry.viewport) {
