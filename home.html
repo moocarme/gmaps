@@ -86,10 +86,7 @@
       <label for="changetype-establishment">Establishments</label>
 
       <input type="radio" name="type" id="changetype-address">
-      <label for="changetype-address">Addresses</label>
-
-      <input type="radio" name="type" id="changetype-geocode">
-      <label for="changetype-geocode">Geocodes</label>
+      <label for="changetype-address">Address</label>
     </div>
     <div id="map"></div>
     <div id = "navbar">
@@ -114,7 +111,8 @@
         <canvas id="canvas"></canvas>
       </div>
       <script src = "makeCart.js"></script>
-      <p id = "cost">Projected Cost</p>
+      <h3>Projected Cost</h3>
+      <p id = "cost"></p>
     </div>
     <script>
       // This example requires the Places library. Include the libraries=places
@@ -167,7 +165,7 @@
           var mylng = place.geometry.location.lng();
           document.getElementById("mylat1").innerHTML = mylat;
           document.getElementById("mylng1").innerHTML = mylng;
-
+          document.getElementById("cost").innerHTML = randomColorFactor();
           // If the place has a geometry, then present it on a map.
           if (place.geometry.viewport) {
             map.fitBounds(place.geometry.viewport);
