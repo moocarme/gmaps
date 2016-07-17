@@ -50,7 +50,7 @@
       }
 
       #pac-input:focus {
-        border-color: #4d90fe;
+        border-color: #2c3e50;
       }
 
       .pac-container {
@@ -59,7 +59,7 @@
 
       #type-selector {
         color: #fff;
-        background-color: #4d90fe;
+        background-color: #2c3e50;
         padding: 5px 11px 0px 11px;
       }
 
@@ -94,22 +94,21 @@
     <div id="map"></div>
     <div id = "navbar">
       <h2>Estimating the number of Injuries at an Intersection</h2>
-      <h4>Latitude</h4>
-      <p id = "mylat1">latitude</p>
-      <h4>Longitude</h4>
-      <p id = "mylng1">longitude</p>
+      <p id = "mylat1">Latitude</p>
+      <p id = "mylng1">Longitude</p>
       <div id="type-selector" class="controls">
-      <input type="radio" name="type" id="changetype-all" checked="checked">
-      <label for="changetype-all">All</label>
+      <input type="checkbox" name="type" id="changetype-all" checked="checked">
+      <label for="changetype-all">Add bike lane.</label>
 
-      <input type="radio" name="type" id="changetype-establishment">
-      <label for="changetype-establishment">Establishments</label>
+      <input type="checkbox" name="type" id="changetype-establishment">
+      <label for="changetype-establishment">Convert driving lane to parking lane.</label>
 
-      <input type="radio" name="type" id="changetype-address">
-      <label for="changetype-address">Addresses</label>
+      <input type="checkbox" name="type" id="changetype-address">
+      <label for="changetype-address">Synchronize traffic lights.</label>
 
-      <input type="radio" name="type" id="changetype-geocode">
+      <input type="checkbox" name="type" id="changetype-geocode">
       <label for="changetype-geocode">Geocodes</label>
+      <button id="randomizeData">Add Changes</button>
     </div>
       <div style="width:95%;">
         <canvas id="canvas"></canvas>
