@@ -124,7 +124,7 @@
       </div>
       <script src = "makeCart.js"></script>
       <h3>Projected Cost</h3>
-      <p id = "cost"></p>
+      <p id = "cost">$0</p>
     </div>
     <script>
       // This example requires the Places library. Include the libraries=places
@@ -151,7 +151,13 @@
           map: map,
           anchorPoint: new google.maps.Point(0, -29)
         });
-        
+        $.each(config.data.datasets, function(i, dataset) {
+                dataset.data = dataset.data.map(function() {
+                  
+                  return 0;
+                  
+                });
+            });
         autocomplete.addListener('place_changed', function() {
           $.each(config.data.datasets, function(i, dataset) {
                 dataset.data = dataset.data.map(function() {
