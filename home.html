@@ -102,8 +102,7 @@
     <div id="map"></div>
     <div id = "navbar">
       <h2>Estimating the number of Injuries at an Intersection</h2>
-      <p id = "mylat1">Latitude</p>
-      <p id = "mylng1">Longitude</p>
+      <p id = "mylat1">Latitude/Longitude</p>
       <div id="type-selector" class="controls2">
       <input type="checkbox" name="type" id="changetype-bl">
       <label for="changetype-all">Add bike lane</label>
@@ -217,8 +216,7 @@
           }
           var mylat = place.geometry.location.lat();
           var mylng = place.geometry.location.lng();
-          document.getElementById("mylat1").innerHTML = "Latitude: " + mylat;
-          document.getElementById("mylng1").innerHTML = "Longitude: " + mylng;
+          document.getElementById("mylat1").innerHTML = "Lat/Long: (" + Math.round(100*mylat)/100 + "," +Math.round(100*mylng)/100 +")";
           
           // If the place has a geometry, then present it on a map.
           if (place.geometry.viewport) {
