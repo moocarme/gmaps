@@ -3,6 +3,10 @@
   <head>
     <title>Place Autocomplete</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
     <meta charset="utf-8">
     <style>
       html, body {
@@ -81,6 +85,13 @@
     <div id="map"></div>
     <div id = "navbar">
       <h1>Estimating the number of Injuries at an Intersection</h1>
+      <h4>Trip Date  : </h4>
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" name="route_date" placeholder="Trip date"/>
+                    <span class="input-group-addon">
+                        <span class="fa fa-calendar"></span>
+                    </span>
+                </div>
       <h4>Latitude</h4>
       <p id = "mylat1">latitude</p>
       <h4>Longitude</h4>
