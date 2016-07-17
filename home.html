@@ -81,11 +81,10 @@
 
       <input type="radio" name="type" id="changetype-geocode">
       <label for="changetype-geocode">Geocodes</label>
-       <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
-  <input type="number" id="a" value="cityLat">100
-  +<input type="number" id="b" value="cityLat">
-  =<output name="x" for="a b"></output>
-</form> 
+      <input TYPE="hidden" name="latitude" class="latitude form-control" value="" />
+      <input TYPE="hidden" name="longitude" class="longitude form-control" value="" />
+                
+      <p id = "test"></p>
     </div>
     <div id="map"></div>
 
@@ -119,9 +118,9 @@
           infowindow.close();
           marker.setVisible(false);
           var place = autocomplete.getPlace();
-          document.getElementById('cityLat').value = place.geometry.location.lat();
-          document.getElementById('cityLng').value = place.geometry.location.lng();
-            
+          $(".latitude").val(place.geometry.location.lat());
+          $(".longitude").val(place.geometry.location.lng());
+          document.getElementById("demo").innerHTML = "latitude";  
           if (!place.geometry) {
             window.alert("Autocomplete's returned place contains no geometry");
             return;
