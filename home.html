@@ -102,7 +102,10 @@
 
       <input type="checkbox" name="type" id="changetype-address">
       <label for="changetype-address">Synchronize traffic lights.</label>
-
+      <input type="checkbox" name="type" id="changetype-address">
+      <label for="changetype-address">Synchronize traffic lights.</label>
+      <input type="checkbox" name="type" id="changetype-address">
+      <label for="changetype-address">Synchronize traffic lights.</label>
       <input type="checkbox" name="type" id="changetype-geocode">
       <label for="changetype-geocode">Geocodes</label>
       <button id="randomizeData">Add Changes</button>
@@ -145,6 +148,7 @@
                     return randomScalingFactor();
                 });
             });
+            document.getElementById("cost").innerHTML = randomColorFactor();
             window.myLine.update();
         });
         autocomplete.addListener('place_changed', function() {
