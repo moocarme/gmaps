@@ -18,12 +18,13 @@ var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "A
                 labels: [["June","2016"], "July", "August", "September", "October", "November", "December", ["January","2017"],"February", "March", "April", "May"],
                 datasets: [{
                     label: "Number of Pedestrian Injuries",
-                    data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()],
+                    data: [randomScalingFactor()*3, randomScalingFactor()*3, randomScalingFactor()*3, randomScalingFactor()*2, randomScalingFactor()*2, randomScalingFactor()*2, randomScalingFactor()*2, randomScalingFactor()*2, randomScalingFactor()*2, randomScalingFactor()*2, randomScalingFactor()*2, randomScalingFactor()*2],
                     fill: false,
-                    borderDash: [5, 5],
+                    
                 }, {
                     label: "Number of Cyclist Injuries",
-                    data: [randomScalingFactor()/2, randomScalingFactor()/2, randomScalingFactor()/2, randomScalingFactor()/2, randomScalingFactor()/2, randomScalingFactor()/2, randomScalingFactor()/2, randomScalingFactor()/2, randomScalingFactor()/2, randomScalingFactor()/2, randomScalingFactor()/2, randomScalingFactor()/2],
+                    data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()],
+                	fill: false,
                 }]
             },
             options: {
