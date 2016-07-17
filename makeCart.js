@@ -108,7 +108,7 @@ var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "A
                     if(i==0){ 
 	                    return randomScalingFactor3x();
 	                  } else{
-	                    return randomScalingFactor3x();
+	                    return randomScalingFactor();
 	                  };
                 });
 
