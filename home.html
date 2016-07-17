@@ -163,6 +163,16 @@
                     
                 });
             });
+          $('#randomizeData').click(function() {
+            $.each(config.data.datasets, function(i, dataset) {
+                dataset.data = dataset.data.map(function() {
+                    if(i==0){ 
+                    return randomScalingFactor3x();
+                  } else{
+                    return randomScalingFactor();
+                  };
+                });
+            });
             var totCost = 0;
             if (document.getElementById("changetype-bl").checked){
               totCost += Math.random()*6 + 19;
@@ -189,6 +199,8 @@
               document.getElementById("cost").innerHTML = "$"+ totCost + ",000";
             }
             
+            window.myLine.update();
+        });
             window.myLine.update();
           infowindow.close();
           marker.setVisible(false);
