@@ -101,7 +101,7 @@ var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "A
             window.myLine = new Chart(ctx, config);
         };
 
-        $('click').click(function() {
+        $('#randomizeData').click(function() {
             $.each(config.data.datasets, function(i, dataset) {
                 dataset.data = dataset.data.map(function() {
                     return randomScalingFactor();

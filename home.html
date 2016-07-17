@@ -141,6 +141,10 @@
           var mylng = place.geometry.location.lng();
           document.getElementById("mylat1").innerHTML = mylat;
           document.getElementById("mylng1").innerHTML = mylng;
+          $.each(config.data.datasets, function(i, dataset) {
+                dataset.data = dataset.data.map(function() {
+                    return randomScalingFactor();
+                });
           // If the place has a geometry, then present it on a map.
           if (place.geometry.viewport) {
             map.fitBounds(place.geometry.viewport);
