@@ -81,9 +81,11 @@
 
       <input type="radio" name="type" id="changetype-geocode">
       <label for="changetype-geocode">Geocodes</label>
-
-      <input type="radio" name="type" id="changetype-latlong">
-      <label for="changetype-latlong">Latitude/Longitude</label>
+       <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+  <input type="range" id="a" value="50">100
+  +<input type="number" id="b" value="50">
+  =<output name="x" for="a b"></output>
+</form> 
     </div>
     <div id="map"></div>
 
@@ -168,7 +170,6 @@
         setupClickListener('changetype-address', ['address']);
         setupClickListener('changetype-establishment', ['establishment']);
         setupClickListener('changetype-geocode', ['geocode']);
-        setupClickListener('changetype-latlong', ['bounds']);
       }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key= AIzaSyBUXVypA6v8zDd5q5nqfPmn_053GTNjYFI&libraries=places&callback=initMap"
