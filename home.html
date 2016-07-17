@@ -82,7 +82,7 @@
       <input type="radio" name="type" id="changetype-geocode">
       <label for="changetype-geocode">Geocodes</label>
                
-      <p id = "test"></p>
+      
     </div>
     <div id="map"></div>
 
@@ -119,7 +119,7 @@
           var lat = val(place.geometry.location.lat());
           var lng = val(place.geometry.location.lng());
 
-          document.getElementById("test").innerHTML = lat;  
+          document.getElementById("test") = lat;  
           if (!place.geometry) {
             window.alert("Autocomplete's returned place contains no geometry");
             return;
