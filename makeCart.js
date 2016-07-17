@@ -77,8 +77,8 @@ var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "A
                             labelString: 'Value'
                         },
                         ticks: {
-                            suggestedMin: -10,
-                            suggestedMax: 250,
+                            suggestedMin: 0,
+                            suggestedMax: 40,
                         }
                     }]
                 }
