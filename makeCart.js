@@ -2,7 +2,7 @@
 var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
         
         var randomScalingFactor = function() {
-            return Math.round(Math.random() * 100);
+            return Math.round(Math.random() * 5 );
             //return 0;
         };
         var randomColorFactor = function() {
@@ -18,7 +18,7 @@ var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "A
                 labels: [["June","2016"], "July", "August", "September", "October", "November", "December", ["January","2017"],"February", "March", "April", "May"],
                 datasets: [{
                     label: "Number of Pedestrian Injuries",
-                    data: [randomScalingFactor()*3, randomScalingFactor()*3, randomScalingFactor()*3, randomScalingFactor()*2, randomScalingFactor()*2, randomScalingFactor()*2, randomScalingFactor()*2, randomScalingFactor()*2, randomScalingFactor()*2, randomScalingFactor()*2, randomScalingFactor()*2, randomScalingFactor()*2],
+                    data: [randomScalingFactor()*3, randomScalingFactor()*3, randomScalingFactor()*3, randomScalingFactor()*3, randomScalingFactor()*3, randomScalingFactor()*3, randomScalingFactor()*3, randomScalingFactor()*3, randomScalingFactor()*3, randomScalingFactor()*3, randomScalingFactor()*3, randomScalingFactor()*3],
                     fill: false,
                     
                 }, {
