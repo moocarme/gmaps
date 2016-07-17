@@ -105,20 +105,18 @@
       <p id = "mylat1">Latitude</p>
       <p id = "mylng1">Longitude</p>
       <div id="type-selector" class="controls2">
-      <input type="checkbox" name="type" id="changetype-all">
-      <label for="changetype-all">Add bike lane.</label>
-      <input type="checkbox" name="type" id="changetype-establishment">
-      <label for="changetype-establishment">Convert driving lane to parking lane.</label>
-      <input type="checkbox" name="type" id="changetype-address">
-      <label for="changetype-address">Synchronize traffic lights.</label>
-    </div>
-    <div id="type-selector" class="controls">
-      <input type="checkbox" name="type" id="changetype-address">
-      <label for="changetype-address">Synchronize traffic lights.</label>
-      <input type="checkbox" name="type" id="changetype-address">
-      <label for="changetype-address">Synchronize traffic lights.</label>
-      <input type="checkbox" name="type" id="changetype-geocode">
-      <label for="changetype-geocode">Geocodes</label>
+      <input type="checkbox" name="type" id="changetype-bl">
+      <label for="changetype-all">Add bike lane</label>
+      <input type="checkbox" name="type" id="changetype-pl">
+      <label for="changetype-establishment">Convert driving lane to parking lane</label>
+      <input type="checkbox" name="type" id="changetype-tl">
+      <label for="changetype-address">Synchronize traffic lights</label>
+      <input type="checkbox" name="type" id="changetype-is">
+      <label for="changetype-address">Improve Signage</label>
+      <input type="checkbox" name="type" id="changetype-rl">
+      <label for="changetype-address">Implement better roadway lighting</label>
+      <input type="checkbox" name="type" id="changetype-tol">
+      <label for="changetype-geocode">Create turn-only lane</label>
       <button id="randomizeData">Add Changes</button>
     </div>
       <div style="width:95%;">
@@ -159,7 +157,14 @@
                     return randomScalingFactor();
                 });
             });
-            document.getElementById("cost").innerHTML = "$"+randomColorFactor() + ",000";
+        var totCost = 0;
+                if ($('#A').is(':checked') == true) {
+                    totCost += 1;
+                }else{
+                    totCost += 17;;
+                }
+            });
+            document.getElementById("cost").innerHTML = "$"+ totCost + ",000";
             window.myLine.update();
         });
         autocomplete.addListener('place_changed', function() {
