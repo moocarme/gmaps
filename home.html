@@ -108,7 +108,8 @@
             window.alert("Autocomplete's returned place contains no geometry");
             return;
           }
-
+          var mylat = place.geometry.location.lat();
+          var mylng = place.geometry.location.lng();
           // If the place has a geometry, then present it on a map.
           if (place.geometry.viewport) {
             map.fitBounds(place.geometry.viewport);
