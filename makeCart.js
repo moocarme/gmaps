@@ -102,21 +102,7 @@ var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "A
             window.myLine = new Chart(ctx, config);
         };
 
-        $('#randomizeData').click(function() {
-            $.each(config.data.datasets, function(i, dataset) {
-                dataset.data = dataset.data.map(function() {
-                    if(i==0){ 
-	                    return randomScalingFactor3x();
-	                  } else{
-	                    return randomScalingFactor();
-	                  };
-                });
-
-            });
-
-            window.myLine.update();
-        });
-
+        
         $('#changeDataObject').click(function() {
             config.data = {
                 labels: ["July", "August", "September", "October", "November", "December"],
