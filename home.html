@@ -20,6 +20,8 @@
       }
       #map {
         height: 100%;
+        float: right ;
+        width: 80% ;
       }
       .controls {
         margin-top: 10px;
@@ -62,16 +64,9 @@
         font-size: 13px;
         font-weight: 300;
       }
-      .trip_loopn{margin-top: 10px; margin-bottom:10px;}
     </style>
   </head>
   <body>
-    <div class="container">
-        <div class="row">
-
-        <div class="col-md-4 start_route">
-            <!-- <div class="add_new_route"> <button class="btn btn-primary"> Add New Route </div> -->
-            <div class="trip_loop1">
 
     <input id="pac-input" class="controls" type="text"
         placeholder="Enter an intersection or location">
@@ -91,14 +86,7 @@
       
     </div>
     <p id = "test">test </p>
-    </div>
-
-      <div class="col-md-8">
-          <div id="map"></div>
-      </div>
-  </div>
-    </div>
-  </div>
+    <div id="map"></div>
 
     <script>
       // This example requires the Places library. Include the libraries=places
