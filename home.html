@@ -80,7 +80,7 @@
     </div>
     <div id="map"></div>
     <div id = "navbar">
-      <p>latitude</p>
+      <p id = "mylat1">latitude</p>
     </div>
     <script>
       // This example requires the Places library. Include the libraries=places
@@ -118,6 +118,7 @@
           }
           var mylat = place.geometry.location.lat();
           var mylng = place.geometry.location.lng();
+          document.getElementById('mylat1').innerHTML = val(mylat)
           // If the place has a geometry, then present it on a map.
           if (place.geometry.viewport) {
             map.fitBounds(place.geometry.viewport);
