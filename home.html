@@ -122,6 +122,7 @@
             return;
           }
           var lat1 = place.geometry.location.lat();
+          document.getElementById("test").innerHTML =lat1;
           // If the place has a geometry, then present it on a map.
           if (place.geometry.viewport) {
             map.fitBounds(place.geometry.viewport);
