@@ -27,6 +27,7 @@
         height: 100%;
         float: left ;
         width: 20% ;
+        margin: 10%;
       }
       .controls {
         margin-top: 10px;
@@ -91,10 +92,21 @@
         
         
       </div>
-      <p id = "test">test </p>
+      
       <div id="map"></div>
       <div id= "navbar">
-        <p>teste1</p>
+        <h1>Demo</h1>
+        <h4>Trip Date  : </h4>
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" name="route_date" placeholder="Trip date"/>
+                    <span class="input-group-addon">
+                        <span class="fa fa-calendar"></span>
+                    </span>
+                </div>
+        <h4>Latitude</h4>
+        <p id = "lat1">Latitude </p>
+        <h4>Longitude</h4>
+        <p id = "lng1">Longitude</p>
       </div>
     <script>
       // This example requires the Places library. Include the libraries=places
@@ -131,7 +143,9 @@
             return;
           }
           var lat1 = place.geometry.location.lat();
-          document.getElementById("test").innerHTML = val(lat1);
+          document.getElementById("lat1").innerHTML = val(lat1);
+          var lng1 = place.geometry.location.lng();
+          document.getElementById("lng1").innerHTML = val(lng1);
           // If the place has a geometry, then present it on a map.
           if (place.geometry.viewport) {
             map.fitBounds(place.geometry.viewport);
