@@ -76,7 +76,9 @@
 
       <input type="radio" name="type" id="changetype-address">
       <label for="changetype-address">Addresses</label>
-      
+      <input type="hidden" id="cityLat" name="cityLat" />
+      <input type="hidden" id="cityLng" name="cityLng" /> 
+
       <input type="radio" name="type" id="changetype-geocode">
       <label for="changetype-geocode">Geocodes</label>
 
@@ -115,6 +117,9 @@
           infowindow.close();
           marker.setVisible(false);
           var place = autocomplete.getPlace();
+          document.getElementById('cityLat').value = place.geometry.location.lat();
+          document.getElementById('cityLng').value = place.geometry.location.lng();
+            
           if (!place.geometry) {
             window.alert("Autocomplete's returned place contains no geometry");
             return;
