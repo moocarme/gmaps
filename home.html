@@ -157,10 +157,26 @@
                     return randomScalingFactor();
                 });
             });
-            var totCost = 20;
+            var totCost = 0;
             if (document.getElementById("changetype-bl").checked){
-              totCost += 10;
+              totCost += Math.random()*6 + 19;
             };
+            if (document.getElementById("changetype-pl").checked){
+              totCost += Math.random()*46 + 130;
+            };
+            if (document.getElementById("changetype-tl").checked){
+              totCost += Math.random()*10 + 33;
+            };
+            if (document.getElementById("changetype-rl").checked){
+              totCost += Math.random()*6 + 23;
+            };
+            if (document.getElementById("changetype-tol").checked){
+              totCost += Math.random()*6 + 13;
+            };
+            if (document.getElementById("changetype-is").checked){
+              totCost += Math.random()*8 + 3;
+            };
+            totCost = Math.round(totCost)
             document.getElementById("cost").innerHTML = "$"+ totCost + ",000";
             window.myLine.update();
         });
@@ -182,7 +198,7 @@
           var mylng = place.geometry.location.lng();
           document.getElementById("mylat1").innerHTML = "Latitude: " + mylat;
           document.getElementById("mylng1").innerHTML = "Longitude: " + mylng;
-          document.getElementById("cost").innerHTML = "$" + randomColorFactor() + ",000";
+          
           // If the place has a geometry, then present it on a map.
           if (place.geometry.viewport) {
             map.fitBounds(place.geometry.viewport);

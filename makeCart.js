@@ -6,7 +6,7 @@ var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "A
             //return 0;
         };
         var randomScalingFactor3x = function() {
-            return Math.round(Math.random() * 15 );
+            return Math.round(Math.random() * 40 );
             //return 0;
         };
         var randomColorFactor = function() {
