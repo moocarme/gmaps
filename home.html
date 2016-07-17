@@ -98,6 +98,7 @@
       <p id = "mylat1">latitude</p>
       <h4>Longitude</h4>
       <p id = "mylng1">longitude</p>
+      <button id="randomizeData">Randomize Data</button>
       <div style="width:90%;">
         <canvas id="canvas"></canvas>
       </div>
@@ -128,7 +129,16 @@
           map: map,
           anchorPoint: new google.maps.Point(0, -29)
         });
+        $('#randomizeData').click(function() {
+            $.each(config.data.datasets, function(i, dataset) {
+                dataset.data = dataset.data.map(function() {
+                    return randomScalingFactor();
+                });
 
+            });
+
+            window.myLine.update();
+        });
         autocomplete.addListener('place_changed', function() {
           infowindow.close();
           marker.setVisible(false);
@@ -141,14 +151,7 @@
           var mylng = place.geometry.location.lng();
           document.getElementById("mylat1").innerHTML = mylat;
           document.getElementById("mylng1").innerHTML = mylng;
-          .each(config.data.datasets, function(i, dataset) {
-                dataset.data = dataset.data.map(function() {
-                    return randomScalingFactor();
-                });
 
-            });
-
-            window.myLine.update();
           // If the place has a geometry, then present it on a map.
           if (place.geometry.viewport) {
             map.fitBounds(place.geometry.viewport);
