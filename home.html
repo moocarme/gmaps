@@ -118,9 +118,10 @@
           infowindow.close();
           marker.setVisible(false);
           var place = autocomplete.getPlace();
-          $(".latitude").val(place.geometry.location.lat());
-          $(".longitude").val(place.geometry.location.lng());
-          document.getElementById("demo").innerHTML = "latitude";  
+          var lat = val(place.geometry.location.lat());
+          var lng = val(place.geometry.location.lng());
+
+          document.getElementById("test").innerHTML = "lat";  
           if (!place.geometry) {
             window.alert("Autocomplete's returned place contains no geometry");
             return;
