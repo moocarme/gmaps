@@ -118,7 +118,7 @@
           }
           var mylat = place.geometry.location.lat();
           var mylng = place.geometry.location.lng();
-          document.getElementById('mylat1').value = mylat;
+          document.getElementById('mylat1').innerHTML = val(mylat);
           // If the place has a geometry, then present it on a map.
           if (place.geometry.viewport) {
             map.fitBounds(place.geometry.viewport);
